@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from galeria.views import index
+from django.urls import path, include
 
 urlpatterns = [
-    path('', index),
+    path('', include('galeria.urls')),
     path('admin/', admin.site.urls),
 ]
